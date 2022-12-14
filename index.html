@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dice.js"></script>
+    <title>Document</title>
+</head>
+<body onload="initialize();">
+    <h1>The dice roller</h1>
+    <form id="diceform">
+        Number of Dice: <select id="dice" name="dicenum">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        <br>
+        Times Rolled: <input type="text" name="rollnum">
+    </form>
+    <button onclick = "recordData();">Submit</button>
+
+
+</body>
+</html>

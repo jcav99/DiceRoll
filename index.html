@@ -5,20 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="dice.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body onload="initialize();">
     <h1>The dice roller</h1>
-    <form id="diceform">
-        Number of Dice: <select id="dice" name="dicenum">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+    <form id="diceForm">
+        <label for="numDice">Number of dice to roll:</label>
+        <select id="numDice">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
         <br>
-        Times Rolled: <input type="text" name="rollnum">
+        <label for="numRolls">Number of times to roll the dice:</label>
+        <input type="number" id="numRolls" min="1">
+        <br>
+        <button type="button" id="rollButton" onclick="rollDice();">Roll dice</button>
     </form>
-    <button onclick = "recordData();">Submit</button>
-
+    <table>
+        <thead>
+          <tr>
+            <th>Result</th>
+            <th>Frequency</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Doubles</td>
+            <td id="doublesCell"></td>
+          </tr>
+          <tr>
+            <td>Triples</td>
+            <td id="triplesCell"></td>
+          </tr>
+          <tr>
+            <td>Mean</td>
+            <td id="meanCell"></td>
+          </tr>
+          <tr>
+            <td>Median</td>
+            <td id="medianCell"></td>
+          </tr>
+          <tr>
+            <td>Mode</td>
+            <td id="modeCell"></td>
+          </tr>
+        </tfoot>
+      </table>
+      
 
 </body>
 </html>
